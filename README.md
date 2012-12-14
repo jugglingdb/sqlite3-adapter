@@ -1,4 +1,4 @@
-## JugglingDB-Redis [![Build Status](https://travis-ci.org/1602/jugglingdb-sqlite3.png)](https://travis-ci.org/1602/jugglingdb-sqlite3)
+## JugglingDB-SQLite3 [![Build Status](https://travis-ci.org/1602/jugglingdb-sqlite3.png)](https://travis-ci.org/1602/jugglingdb-sqlite3)
 
 SQLite3 adapter for jugglingdb based on [developmentseed/node-sqlite3](https://github.com/developmentseed/node-sqlite3) sqlite3 bindings.
 
