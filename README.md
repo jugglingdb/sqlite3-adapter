@@ -2,7 +2,7 @@
 
 SQLite3 adapter for jugglingdb based on [developmentseed/node-sqlite3](https://github.com/developmentseed/node-sqlite3) sqlite3 bindings.
 
-## Usage
+## Installation & Usage
 
 To use it you need `jugglingdb@0.2.x`.
 
