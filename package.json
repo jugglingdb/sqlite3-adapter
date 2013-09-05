@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "should": "~1.2.2",
-    "mocha": "~1.8.2"
+    "mocha": "~1.8.2",
+    "semicov": "~0.1.1-1"
   },
   "repository": {
     "type": "git",
