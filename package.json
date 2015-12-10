@@ -7,7 +7,7 @@
     "test": "make test"
   },
   "dependencies": {
-    "jugglingdb": "= 0.2.x",
+    "jugglingdb": "0.2.x",
     "sqlite3": ">= 2.0.18"
   },
   "devDependencies": {
