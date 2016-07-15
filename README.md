@@ -1,4 +1,10 @@
-## JugglingDB-SQLite3 [![Build Status](https://travis-ci.org/1602/jugglingdb-sqlite3.png)](https://travis-ci.org/1602/jugglingdb-sqlite3)
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+[![Build status][build-image]][build-url]
+[![Test Coverage][coveralls-image]][coveralls-url]
+[![Dependency Status][dependencies-image]][dependencies-url]
+
+## JugglingDB-SQLite3
 
 SQLite3 adapter for jugglingdb based on [developmentseed/node-sqlite3](https://github.com/developmentseed/node-sqlite3) sqlite3 bindings.
 
@@ -53,4 +59,15 @@ To use it you need `jugglingdb@0.2.x`.
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
+
+[coveralls-url]: https://coveralls.io/github/jugglingdb/sqlite3-adapter
+[coveralls-image]: https://coveralls.io/repos/github/jugglingdb/sqlite3-adapter/badge.svg
+[build-url]: https://circleci.com/gh/jugglingdb/sqlite3-adapter
+[build-image]: https://circleci.com/gh/jugglingdb/sqlite3-adapter.svg?style=shield
+[npm-image]: https://img.shields.io/npm/v/jugglingdb-sqlite3.svg
+[npm-url]: https://npmjs.org/package/jugglingdb-sqlite3
+[downloads-image]: https://img.shields.io/npm/dm/jugglingdb-sqlite3.svg
+[downloads-url]: https://npmjs.org/package/jugglingdb-sqlite3
+[dependencies-image]: https://david-dm.org/jugglingdb/sqlite3-adapter.svg
+[dependencies-url]: https://david-dm.org/jugglingdb/sqlite3-adapter
 
