@@ -9,8 +9,8 @@
     "test-coverage": "istanbul cover node_modules/.bin/_mocha -- -R dot"
   },
   "dependencies": {
-    "jugglingdb": "= 2.0.0-rc5",
-    "sqlite3": "^3.1.4"
+    "jugglingdb": "=2.0.0-rc5",
+    "sqlite3": "=3.1.4"
   },
   "devDependencies": {
     "istanbul": "^1.1.0-alpha.1",
