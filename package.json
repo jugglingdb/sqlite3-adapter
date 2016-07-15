@@ -13,6 +13,7 @@
     "sqlite3": "latest"
   },
   "devDependencies": {
+    "istanbul": "^1.1.0-alpha.1",
     "mocha": "^2.5.3",
     "should": "^9.0.2"
   },
