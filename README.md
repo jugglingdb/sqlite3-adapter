@@ -6,7 +6,7 @@
 
 ## JugglingDB-SQLite3
 
-SQLite3 adapter for jugglingdb based on [developmentseed/node-sqlite3](https://github.com/developmentseed/node-sqlite3) sqlite3 bindings.
+SQLite3 adapter for jugglingdb based on [mapbox/node-sqlite3](https://github.com/mapbox/node-sqlite3) sqlite3 bindings.
 
 ## Installation & Usage
 
