@@ -1,4 +1,5 @@
 const should = require('./init.js');
+const Schema = require('jugglingdb').Schema;
 let db, UserData;
 
 /* global getSchema */
@@ -12,7 +13,9 @@ describe('basic-query-sqlite', function() {
             name : String,
             email : String,
             role : String,
-            order : Number
+            order : Number,
+            bio: Schema.Text,
+            doc: Schema.JSON
         });
 
         db.automigrate(done);
@@ -165,7 +168,9 @@ function seed() {
         name : 'John Lennon',
         email : 'john@b3atl3s.co.uk',
         role : 'lead',
-        order : 2
+        order : 2,
+        bio: 'Foo bar',
+        doc: { foo: 'bar' }
     }, {
         name : 'Paul McCartney',
         email : 'paul@b3atl3s.co.uk',
