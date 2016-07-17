@@ -12,6 +12,7 @@
     "test-coverage": "istanbul cover node_modules/.bin/_mocha -- -R dot"
   },
   "dependencies": {
+    "debug": "^2.2.0",
     "jugglingdb": "=2.0.0-rc6",
     "sqlite3": "=3.1.4"
   },
