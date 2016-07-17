@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "debug": "^2.2.0",
-    "jugglingdb": "=2.0.0-rc6",
+    "jugglingdb": "=2.0.0-rc7",
     "sqlite3": "=3.1.4"
   },
   "devDependencies": {
