@@ -161,6 +161,35 @@ describe('basic-query-sqlite', function() {
             });
     });
 
+    it('should support "NOT" condition in Model.count', () => {
+        return UserData.count({
+            not: {
+                or: [
+                    { email: { like: '%paul%' }},
+                    { email: null }
+                ]
+            }
+        })
+            .then(count => {
+                count.should.equal(1);
+            });
+    });
+
+    it('should support "NOT" condition in Model.all', () => {
+        return UserData.all({ where: {
+            not: {
+                or: [
+                    { email: { like: '%paul%' }},
+                    { email: null }
+                ]
+            }
+        }})
+            .then(x => {
+                x.should.have.lengthOf(1);
+                x[0].email.should.equal('john@b3atl3s.co.uk');
+            });
+    });
+
 }); 
 
 function seed() {
