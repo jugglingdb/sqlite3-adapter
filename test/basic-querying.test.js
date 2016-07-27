@@ -4,7 +4,7 @@ let db, UserData;
 
 /* global getSchema */
 
-describe('basic-query-sqlite', function() {
+describe('basic-query-sqlite', () => {
     before(setup);
 
     before(done => {
@@ -26,30 +26,30 @@ describe('basic-query-sqlite', function() {
     it('should query collection using or operator', () => {
         return UserData.all({
             where : {
-                or : [{
+                or : [ {
                     name : 'Paul McCartney'
                 }, {
                     name : 'John Lennon'
-                }]
+                } ]
             }
         })
             .then(users => {
                 should.exist(users);
                 users.should.have.lengthOf(2);
-                users.forEach(function(u) {
+                users.forEach(u => {
                     u.role.should.eql('lead');
                 });
             });
     });
-  
-    it('should query collection using or operator on different fields', function() {
+
+    it('should query collection using or operator on different fields', () => {
         return UserData.all({
             where : {
-                or : [{
+                or : [ {
                     name : 'Not a User'
                 }, {
                     order : '5'
-                }]
+                } ]
             }
         })
             .then(users => {
@@ -63,11 +63,11 @@ describe('basic-query-sqlite', function() {
         return UserData.all({
             where : {
                 name : 'Ringo Starr',
-                or : [{
+                or : [ {
                     role : 'lead'
                 }, {
                     order : '6'
-                }]
+                } ]
             }
         })
             .then(users => {
@@ -78,84 +78,86 @@ describe('basic-query-sqlite', function() {
     });
 
     it('should query by null', () => {
-        return UserData.findOne({ where: { email: null }})
+        return UserData.findOne({ where: { email: null } })
             .then(user => {
                 should.not.exist(user.email);
             });
     });
 
     it('should support exclusion from empty set', () => {
-        return UserData.count({ email: { nin: [] }})
+        return UserData.count({ email: { nin: [] } })
             .then(count => {
-                count.should.equal(6); // full set
+                // full set
+                count.should.equal(6);
             });
     });
 
     it('should support exclusion from non empty set', () => {
-        return UserData.count({ order: { nin: [ 1 ] }})
+        return UserData.count({ order: { nin: [ 1 ] } })
             .then(count => {
                 count.should.equal(5);
             });
     });
 
     it('should support inclusion in empty set', () => {
-        return UserData.count({ email: { inq: [] }})
+        return UserData.count({ email: { inq: [] } })
             .then(count => {
-                count.should.equal(0); // empty set
+                // empty set
+                count.should.equal(0);
             });
     });
 
     it('should query by "gt"', () => {
-        return UserData.count({ order: { gt: 2 }})
+        return UserData.count({ order: { gt: 2 } })
             .then(count => {
                 count.should.equal(4);
             });
     });
 
     it('should query by "gte"', () => {
-        return UserData.count({ order: { gte: 2 }})
+        return UserData.count({ order: { gte: 2 } })
             .then(count => {
                 count.should.equal(5);
             });
     });
 
     it('should query by "lt"', () => {
-        return UserData.count({ order: { lt: 2 }})
+        return UserData.count({ order: { lt: 2 } })
             .then(count => {
                 count.should.equal(1);
             });
     });
 
     it('should query by "lte"', () => {
-        return UserData.count({ order: { lte: 2 }})
+        return UserData.count({ order: { lte: 2 } })
             .then(count => {
                 count.should.equal(2);
             });
     });
 
     it('should query by "ne"', () => {
-        return UserData.count({ order: { ne: 2 }})
+        return UserData.count({ order: { ne: 2 } })
             .then(count => {
                 count.should.equal(5);
             });
     });
 
     it('should query by using "LIKE"', () => {
-        return UserData.count({ email: { like: '%b3atl3s%' }})
+        return UserData.count({ email: { like: '%b3atl3s%' } })
             .then(count => {
                 count.should.equal(2);
             });
     });
 
     it('should query by using "NLIKE"', () => {
-        return UserData.count({ email: { nlike: '%paul%' }})
+        return UserData.count({ email: { nlike: '%paul%' } })
             .then(count => {
                 count.should.equal(1);
             });
     });
 
     it('should query by using "BETWEEN"', () => {
-        return UserData.count({ order: { between: [ 3, 5 ] }})
+        return UserData.count({ order: { between: [ 3, 5 ] } })
             .then(count => {
                 count.should.equal(3);
             });
@@ -165,7 +167,7 @@ describe('basic-query-sqlite', function() {
         return UserData.count({
             not: {
                 or: [
-                    { email: { like: '%paul%' }},
+                    { email: { like: '%paul%' } },
                     { email: null }
                 ]
             }
@@ -179,21 +181,21 @@ describe('basic-query-sqlite', function() {
         return UserData.all({ where: {
             not: {
                 or: [
-                    { email: { like: '%paul%' }},
+                    { email: { like: '%paul%' } },
                     { email: null }
                 ]
             }
-        }})
+        } })
             .then(x => {
                 x.should.have.lengthOf(1);
                 x[0].email.should.equal('john@b3atl3s.co.uk');
             });
     });
 
-}); 
+});
 
 function seed() {
-    const beatles = [{
+    const beatles = [ {
         name : 'John Lennon',
         email : 'john@b3atl3s.co.uk',
         role : 'lead',
@@ -213,7 +215,7 @@ function seed() {
         name : 'Pete Best', order : 4
     }, {
         name : 'Stuart Sutcliffe', order : 3
-    }];
+    } ];
 
     return UserData.destroyAll()
         .then(() => Promise.all(beatles.map(beatle => UserData.create(beatle))));
