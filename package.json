@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec --bail --check-leaks test/",
+    "lint": "eslint lib/ test/",
     "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
     "test-coverage": "istanbul cover node_modules/.bin/_mocha -- -R dot"
   },

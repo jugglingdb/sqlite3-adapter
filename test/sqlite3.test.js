@@ -1,6 +1,6 @@
-describe('sqlite3 imported features', function() {
+describe('sqlite3 imported features', () => {
 
-    before(function() {
+    before(() => {
         require('./init.js');
     });
 
