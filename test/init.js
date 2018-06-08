@@ -1,6 +1,6 @@
 module.exports = require('should');
 
-const Schema = require('jugglingdb').Schema;
+const Schema = require('@pulse/jugglingdb').Schema;
 
 global.getSchema = function() {
     const db = new Schema(require('../'), { database: ':memory:' });

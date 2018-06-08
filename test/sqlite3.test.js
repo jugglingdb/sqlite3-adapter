@@ -4,7 +4,7 @@ describe('sqlite3 imported features', () => {
         require('./init.js');
     });
 
-    require('jugglingdb/test/common.batch.js');
-    require('jugglingdb/test/include.test.js');
+    require('@pulse/jugglingdb/test/common.batch.js');
+    require('@pulse/jugglingdb/test/include.test.js');
 
 });
