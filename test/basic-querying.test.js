@@ -1,5 +1,5 @@
 const should = require('./init.js');
-const Schema = require('jugglingdb').Schema;
+const Schema = require('@pulse/jugglingdb').Schema;
 let db, UserData;
 
 /* global getSchema */

@@ -1,5 +1,5 @@
 {
-  "name": "jugglingdb-sqlite3",
+  "name": "@pulse/jugglingdb-sqlite3",
   "version": "0.1.0",
   "engines": {
     "node": ">=4"
@@ -14,19 +14,19 @@
   },
   "dependencies": {
     "debug": "^2.2.0",
-    "jugglingdb": "=2.0.0-rc8",
+    "@pulse/jugglingdb": "2.0.0",
     "sqlite3": "^3.1.8"
   },
   "devDependencies": {
     "eslint": "^3.1.0",
     "eslint-config-1602": "^1.0.0",
     "istanbul": "^1.1.0-alpha.1",
-    "mocha": "^2.5.3",
+    "mocha": "^4.0.0",
     "should": "^9.0.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jugglingdb/sqlite3-adapter.git"
+    "url": "https://github.com/QAS-Labs/sqlite3-adapter.git"
   },
   "author": "Anatoliy Chakkaev <mail@anatoliy.in>",
   "license": "MIT"
