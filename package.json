@@ -15,7 +15,7 @@
   "dependencies": {
     "debug": "^2.2.0",
     "jugglingdb": "=2.0.0-rc8",
-    "sqlite3": "^3.1.8"
+    "sqlite3": "^4.0.9"
   },
   "devDependencies": {
     "eslint": "^3.1.0",
